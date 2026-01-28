@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  background-color: rgb(12, 105, 242);
+  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+header .logo {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 900;
+}
+input[type="text"] {
+  background-color: rgb(61, 133, 237);
+  border-radius: 10px;
+  border: 1px;
+  padding: 5px 10px;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  header {
+    justify-content: flex-start;
+  }
+}

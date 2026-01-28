@@ -1,0 +1,20 @@
+let nameBook = prompt("Tên sách:");
+let bookAuthor = prompt("Tên tác giả:");
+let yearBook = prompt("Năm xuất bản:");
+let price = prompt("giá tiền một cuốn:");
+let quantity = prompt("số lượng nhập kho:");
+let year = new Date().getFullYear();
+let newNameBook = nameBook.trim().toLocaleUpperCase();
+let newBookAuthor = bookAuthor.toLocaleUpperCase();
+let bookId =
+  newBookAuthor.slice(0, 3) + year + Math.floor(Math.random() * 1000 + 1);
+let ageBook = year - +yearBook;
+let sum = price * quantity;
+console.log("--- PHIẾU NHẬP KHO ---");
+console.log("mã sách: ", bookId);
+console.log("tên sách: ", nameBook);
+console.log("tác giả: ", newBookAuthor);
+console.log("Năm xuất bản: ", yearBook);
+console.log("tuổi sách: ", ageBook);
+console.log(`tổng giá trị: ${price} VNĐ`);
+console.log(`ngăn kê gợi ý: kệ số${Math.floor(Math.random() * 10 + 1)}`);
