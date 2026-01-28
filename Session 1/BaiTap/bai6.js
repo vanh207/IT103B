@@ -1,7 +1,7 @@
-let nameBook = prompt("nhập tên sách: ");
-let yearBook = prompt("nhập năm xuất bản sách: ");
-let newYearBook = Number(yearBook);
-let year = new Date().getFullYear();
-let yearAge = year - newYearBook;
-console.log("sách: ", nameBook);
-console.log("năm xuất bản: ", yearAge);
+
+let originalBookName = prompt("nhập tên sách:");
+let bookIndex = prompt("nhập số thứ tự của sách trong thư viện:");
+let normalizedBookName = originalBookName.trim().toUpperCase();
+let bookCode = `LIB - ${normalizedBookName} - ${bookIndex}`;
+console.log("Tên sách gốc:", originalBookName);
+console.log("Mã sách sau chuẩn hóa:", bookCode);
