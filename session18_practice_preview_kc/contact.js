@@ -77,7 +77,7 @@ contactForm.addEventListener("submit", (e) => {
     return;
   }
 
-  const index = contacts.findIndex((c) => c.id === currentEditId);
+  const index = contacts.findIndex((element) => element.id === currentEditId);
   if (index !== -1) {
     contacts[index] = { ...contacts[index], name, phone, email };
     alert("Cập nhật sản phẩm thành công!");
@@ -87,7 +87,7 @@ contactForm.addEventListener("submit", (e) => {
 });
 
 window.editContact = (id) => {
-  const contact = contacts.find((c) => c.id === id);
+  const contact = contacts.find((element) => element.id === id);
   if (contact) {
     nameInput.value = contact.name;
     phoneInput.value = contact.phone;
@@ -102,7 +102,7 @@ window.editContact = (id) => {
 
 window.deleteContact = (id) => {
   if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
-    contacts = contacts.filter((c) => c.id !== id);
+    contacts = contacts.filter((element) => element.id !== id);
     renderContacts();
     alert("Xóa sản phẩm thành công!");
     if (currentEditId === id) resetForm();
