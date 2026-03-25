@@ -68,12 +68,8 @@ window.editMusic = (id) => {
     titleInput.value = song.nameMusic;
     artistInput.value = song.singer;
     submitBtn.innerText = "Cập nhật";
-    if (formTitle) {
-      formTitle.innerText = "📝 Sửa bài hát";
-    }
-    if (cancelBtn) {
-      cancelBtn.style.display = "inline";
-    }
+    formTitle.innerText = "📝 Sửa bài hát";
+    cancelBtn.style.display = "inline";
     editId = id;
     titleInput.focus();
   }
